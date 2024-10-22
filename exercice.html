@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Mathématique</title>
+    
+    <!-- Inclusion des styles pour Reveal.js et KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    
+    <!-- Scripts pour Reveal.js et KaTeX -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    
+    <style>
+        body { font-family: 'Arial', sans-serif; }
+        .reveal h2 { color: #1a1a1a; }
+        .katex-display { margin: 20px 0; }
+        .question { margin-top: 20px; }
+        .question ul { list-style-type: none; padding-left: 0; }
+        .question li { margin-bottom: 15px; }
+        .question input[type="checkbox"] { margin-right: 10px; }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1 : Question Mathématique -->
+            <section>
+                <h2>Exercice 16</h2>
+                <p>Soit <em>m</em> un réel. On considère la fonction trinôme définie sur <em>ℝ</em> par :</p>
+                <p>
+                    <span class="katex-display">\[
+                    f(x) = x^2 + 4x + m
+                    \]</span>
+                </p>
+                <p>Indiquer les affirmations exactes parmi celles proposées.</p>
+
+                <!-- Liste des affirmations -->
+                <div class="question">
+                    <ul>
+                        <li><input type="checkbox"> a. Si \( m > 0 \), alors \( f(x) \geq 0 \) pour tout réel \( x \).</li>
+                        <li><input type="checkbox"> b. Le produit des deux racines (si elles existent) est égal à \( m \).</li>
+                        <li><input type="checkbox"> c. Si \( m < 0 \), alors \( f \) admet deux racines réelles distinctes.</li>
+                        <li><input type="checkbox"> d. Si \( m = 4 \), \( f \) admet une racine double.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Initialisation de Reveal.js
+        Reveal.initialize({
+            progress: true,
+            slideNumber: true,
+            controls: true,
+            autoSlide: 10000
+        });
+
+        // Activation de KaTeX pour le rendu des formules mathématiques
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "\\(", right: "\\)", display: false},
+                    {left: "\\[", right: "\\]", display: true}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
